@@ -1,0 +1,13 @@
+name = Views Mosaic
+description = Implementation of mosaic jquery library as view plugin
+dependencies[] = views
+dependencies[] = libraries
+package = Views
+core = 7.x
+
+; Information added by drupal.org packaging script on 2013-02-17
+version = "7.x-1.0-alpha3"
+core = "7.x"
+project = "views_mosaic"
+datestamp = "1361063691"
+

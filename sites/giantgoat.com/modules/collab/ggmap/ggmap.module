@@ -1,0 +1,238 @@
+<?php
+
+/**
+ * Generate a simple map to GiantGoat with a location pointer.
+ * 
+ * @return string
+ *   The rendered map.
+ */
+
+ 
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function ggmap_ctools_plugin_directory($owner, $plugin_type) {
+  if ($owner == 'ctools' && $plugin_type == 'content_types') {
+    return 'plugins/' . $plugin_type;
+  }
+}
+
+/**
+ * An edit form for the pane's settings.
+ */
+function ggmap_pane_settings_form($form, &$form_state) {
+  $conf = $form_state['conf'];
+ 
+  $form['lat'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Latitude'),
+    '#description' => t('Latitude'),
+    '#default_value' => $conf['lat'],
+    '#required' => TRUE,
+  );
+  
+  $form['lng'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Longitude'),
+    '#description' => t('Longitude'),
+    '#default_value' => $conf['lng'],
+    '#required' => TRUE,
+  );
+ 
+  return $form;
+}
+ 
+/**
+ * Submit function, note anything in the formstate[conf] automatically gets saved
+ * Notice, the magic that automatically does that for you.
+ */
+function ggmap_pane_settings_form_submit(&$form, &$form_state) {
+  foreach (array_keys($form_state['plugin']['defaults']) as $key) {
+    if (isset($form_state['values'][$key])) {
+      $form_state['conf'][$key] = $form_state['values'][$key];
+    }
+  }
+}
+
+/**
+ * Run-time rendering of the body of the block (content type)
+ * See ctools_plugin_examples for more advanced info
+ */
+function ggmap_pane_render($subtype, $conf, $args, $contexts) {
+  /*dpm($subtype);
+  dpm($conf);
+  dpm($args);
+  dpm($contexts);*/
+ 
+	//$conf['lat'];
+	//$conf['lng'];
+	
+	//$map = gg_map_info();
+    //$map = leaflet_render_map(ggmap_map_info(), ggmap_map_features($conf), '450px');
+  $map_info = leaflet_map_get_info('ggsite-cloudmade-noscroll');
+  $map_info['settings']['scrollWheelZoom'] = TRUE;
+  $map_info['settings']['doubleClickZoom'] = TRUE;
+
+    //$map = leaflet_render_map($map_info, array(), '450px');
+  $features = ggmap_map_features($conf);
+    $map = leaflet_render_map($map_info, $features, '450px');
+ 
+	//return $map;
+ 
+	$block = new stdClass();
+
+	// initial content is blank
+	//$block->title = t('Leaflet Map'); // This will be overridden by the user within the panel options.
+	$block->content = $map;
+  //dpm($map);
+  //dpm($block);
+  //dpm($features);
+	return $block;
+}
+
+/**
+ * 'admin info' callback for panel pane.
+ */
+function ggmap_admin_info($subtype, $conf, $contexts) {
+  if (!empty($conf)) {
+    $block = new stdClass;
+    $block->title = $conf['override_title'] ? $conf['override_title_text'] : '';
+    $block->content = $conf['lat'];
+    return $block;
+  }
+}
+
+function ggmap_map_features($point){
+  $features = array(
+    array(
+      'type' => 'point',
+      'lat' => (float) $point['lat'],
+      'lon' => (float) $point['lng'],
+      //'icon' => array(),
+     /* 'icon' => array(
+        'iconUrl' => 'sites/default/files/mymarker.png
+      ),*/
+      //'popup' => l($node->title, 'node/' . $node->nid),
+      'leaflet_id' => 'gg_office'
+    ),
+  );
+  return $features;
+}
+
+function ggmap_leaflet_map_info(){
+  return array(
+    'ggsite-cloudmade-noscroll' => array(
+      'label' => 'CM-Gotr nowheel',
+      'description' => 'Cloudmade GiantGoat Site (no-scrollwheel)',
+      'settings' => array(
+        'dragging' => TRUE,
+        'touchZoom' => TRUE,
+        'scrollWheelZoom' => FALSE,
+        'doubleClickZoom' => FALSE,
+        'zoomControl' => TRUE,
+        'attributionControl' => TRUE,
+        'trackResize' => TRUE,
+        'fadeAnimation' => TRUE,
+        'zoomAnimation' => TRUE,
+        'closePopupOnClick' => TRUE,
+        'layerControl' => FALSE,
+        //'minZoom' => 10,
+        'maxZoom' => 18,
+        // 'zoom' => 15, // set the map zoom fixed to 15
+      ),
+      'layers' => array(
+        'earth' => array(
+          'urlTemplate' => 'http://{s}.tile.cloudmade.com/baae78bc721e48fd87f3b0375b380242/99664/256/{z}/{x}/{y}.png',
+          'options' => array(
+            'attribution' => '<a href="/colophon">Used under license</a>',
+          ),
+        ),
+      ),
+    ),
+    'ggmap' => array(
+      'label' => 'OSM Mapnik ggCustom',
+      'description' => t('Custom map'),
+      /*'center' => array(
+        'lon' => 14.32411,
+        'lat' => 47.88101,
+      ),*/
+      'settings' => array(
+        'dragging' => FALSE,
+        'touchZoom' => FALSE,
+        'scrollWheelZoom' => FALSE,
+        'doubleClickZoom' => FALSE,
+        'zoomControl' => TRUE,
+        'attributionControl' => TRUE,
+        'trackResize' => TRUE,
+        'fadeAnimation' => TRUE,
+        'zoomAnimation' => TRUE,
+        'closePopupOnClick' => TRUE,
+        'layerControl' => FALSE,
+        // 'minZoom' => 10,
+        // 'maxZoom' => 15,
+         'zoom' => 15, // set the map zoom fixed to 15
+      ),
+      'layers' => array(
+        'earth' => array(
+          'urlTemplate' => 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+          'options' => array(
+            'attribution' => 'OSM Mapnik'
+          )
+        ),
+      ),
+      // Uncomment the lines below to use a custom icon
+      // 'icon' => array(
+      //   'iconUrl'       => '/sites/default/files/icon.png',
+      //   'iconSize'      => array('x' => '20', 'y' => '40'),
+      //   'iconAnchor'    => array('x' => '20', 'y' => '40'),
+      //   'popupAnchor'   => array('x' => '-8', 'y' => '-32'),
+      //   'shadowUrl'     => '/sites/default/files/icon-shadow.png',
+      //   'shadowSize'    => array('x' => '25', 'y' => '27'),
+      //   'shadowAnchor'  => array('x' => '0', 'y' => '27'),
+      // ),
+    ),
+  );
+}
+
+function ggmap_amap_info() {
+  return array(
+    'OSM Mapnik' => array(
+      'label' => 'OSM Mapnik',
+      'description' => t('Leaflet default map.'),
+      'settings' => array(
+        'dragging' => TRUE,
+        'touchZoom' => TRUE,
+        'scrollWheelZoom' => TRUE,
+        'doubleClickZoom' => TRUE,
+        'zoomControl' => TRUE,
+        'attributionControl' => TRUE,
+        'trackResize' => TRUE,
+        'fadeAnimation' => TRUE,
+        'zoomAnimation' => TRUE,
+        'closePopupOnClick' => TRUE,
+        'layerControl' => TRUE,
+        // 'minZoom' => 10,
+        // 'maxZoom' => 15,
+        // 'zoom' => 15, // set the map zoom fixed to 15
+      ),
+      'layers' => array(
+        'earth' => array(
+          'urlTemplate' => 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+          'options' => array(
+            'attribution' => 'OSM Mapnik'
+          )
+        ),
+      ),
+      // Uncomment the lines below to use a custom icon
+      // 'icon' => array(
+      //   'iconUrl'       => '/sites/default/files/icon.png',
+      //   'iconSize'      => array('x' => '20', 'y' => '40'),
+      //   'iconAnchor'    => array('x' => '20', 'y' => '40'),
+      //   'popupAnchor'   => array('x' => '-8', 'y' => '-32'),
+      //   'shadowUrl'     => '/sites/default/files/icon-shadow.png',
+      //   'shadowSize'    => array('x' => '25', 'y' => '27'),
+      //   'shadowAnchor'  => array('x' => '0', 'y' => '27'),
+      // ),
+    ),
+  );
+}

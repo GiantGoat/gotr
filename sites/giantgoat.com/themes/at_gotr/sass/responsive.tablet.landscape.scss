@@ -1,0 +1,60 @@
+
+@import "base.scss";
+
+/**
+ *   Important Information about this CSS File
+ *
+ * - Do not delete or rename this file, if you do not use it leave it blank (delete 
+ *   everything) and the file will be skipped when you enable Production Mode in
+ *   the Global theme settings.
+ *   
+ * - There is an scss (SASS) version of this file in the /sass/ directory in your
+ *   sub-theme, if you set Compass to watch it or the directory this file will be
+ *   overwritten!
+ *
+ * - Read the _README file in this directory, it contains useful help and other information.
+ */
+
+ body {
+	//color:red !important;
+ }
+ 
+ .pane-pane-header {
+	max-width:85%;
+}
+ 
+ nav {
+	font-size:0.85em;
+ }
+ 
+/* Client grid */
+.pane-client-grid-panel-pane-1 {
+	//height:700px;
+	.views-quicksand {
+		width:20%;
+	}
+}
+
+/* Case Studies */
+.view-case-studies {
+	.views-row {
+		width:25%;
+	}
+	.views-row-first {
+		width:50%;
+	}
+}
+
+/* Services */
+.serviceLocked { //menu
+	left:0;
+	top: 1.7em;
+}
+.view-services {
+	.attachment {
+		li { width:25%; margin:1%; background-image:none !important;}
+		a {height: 1.5em; float: none; font-size:1em; margin:0; text-align: center; padding-top: 0.8em; width:auto; }
+	}
+	.views-row-3 img.image-style-none { padding-top: 9em; }
+	.views-row-5 img.image-style-none { padding-top: 13em; }
+}
