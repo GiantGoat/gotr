@@ -1,0 +1,70 @@
+/**
+ *   Important Information about this CSS File
+ *
+ * - Do not delete or rename this file, if you do not use it leave it blank (delete 
+ *   everything) and the file will be skipped when you enable Production Mode in
+ *   the Global theme settings.
+ *   
+ * - There is an scss (SASS) version of this file in the /sass/ directory in your
+ *   sub-theme, if you set Compass to watch it or the directory this file will be
+ *   overwritten!
+ *
+ * - Read the _README file in this directory, it contains useful help and other information.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/data\/disk\/o4875398837\/static\/launchpad_1_golden\/sites\/giantgoat\.com\/themes\/at_gotr\/sass\/responsive\.tablet\.landscape\.scss}line{font-family:\0000322}}
+.pane-pane-header {
+  max-width: 85%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/data\/disk\/o4875398837\/static\/launchpad_1_golden\/sites\/giantgoat\.com\/themes\/at_gotr\/sass\/responsive\.tablet\.landscape\.scss}line{font-family:\0000326}}
+nav {
+  font-size: 0.85em;
+}
+
+/* Client grid */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/data\/disk\/o4875398837\/static\/launchpad_1_golden\/sites\/giantgoat\.com\/themes\/at_gotr\/sass\/responsive\.tablet\.landscape\.scss}line{font-family:\0000333}}
+.pane-client-grid-panel-pane-1 .views-quicksand {
+  width: 20%;
+}
+
+/* Case Studies */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/data\/disk\/o4875398837\/static\/launchpad_1_golden\/sites\/giantgoat\.com\/themes\/at_gotr\/sass\/responsive\.tablet\.landscape\.scss}line{font-family:\0000340}}
+.view-case-studies .views-row {
+  width: 25%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/data\/disk\/o4875398837\/static\/launchpad_1_golden\/sites\/giantgoat\.com\/themes\/at_gotr\/sass\/responsive\.tablet\.landscape\.scss}line{font-family:\0000343}}
+.view-case-studies .views-row-first {
+  width: 50%;
+}
+
+/* Services */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/data\/disk\/o4875398837\/static\/launchpad_1_golden\/sites\/giantgoat\.com\/themes\/at_gotr\/sass\/responsive\.tablet\.landscape\.scss}line{font-family:\0000349}}
+.serviceLocked {
+  left: 0;
+  top: 1.7em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/data\/disk\/o4875398837\/static\/launchpad_1_golden\/sites\/giantgoat\.com\/themes\/at_gotr\/sass\/responsive\.tablet\.landscape\.scss}line{font-family:\0000355}}
+.view-services .attachment li {
+  width: 25%;
+  margin: 1%;
+  background-image: none !important;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/data\/disk\/o4875398837\/static\/launchpad_1_golden\/sites\/giantgoat\.com\/themes\/at_gotr\/sass\/responsive\.tablet\.landscape\.scss}line{font-family:\0000356}}
+.view-services .attachment a {
+  height: 1.5em;
+  float: none;
+  font-size: 1em;
+  margin: 0;
+  text-align: center;
+  padding-top: 0.8em;
+  width: auto;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/data\/disk\/o4875398837\/static\/launchpad_1_golden\/sites\/giantgoat\.com\/themes\/at_gotr\/sass\/responsive\.tablet\.landscape\.scss}line{font-family:\0000358}}
+.view-services .views-row-3 img.image-style-none {
+  padding-top: 9em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/data\/disk\/o4875398837\/static\/launchpad_1_golden\/sites\/giantgoat\.com\/themes\/at_gotr\/sass\/responsive\.tablet\.landscape\.scss}line{font-family:\0000359}}
+.view-services .views-row-5 img.image-style-none {
+  padding-top: 13em;
+}

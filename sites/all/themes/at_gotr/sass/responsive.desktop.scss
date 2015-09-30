@@ -1,0 +1,164 @@
+
+@import "base.scss";
+
+/**
+ *   Important Information about this CSS File
+ *
+ * - Do not delete or rename this file, if you do not use it leave it blank (delete
+ *   everything) and the file will be skipped when you enable Production Mode in
+ *   the Global theme settings.
+ *
+ * - There is an scss (SASS) version of this file in the /sass/ directory in your
+ *   sub-theme, if you set Compass to watch it or the directory this file will be
+ *   overwritten!
+ *
+ * - Read the _README file in this directory, it contains useful help and other information.
+ */
+
+ h1.pagetitle { max-width:1140px; margin:auto; margin-bottom:20px;}
+
+ /* Header */
+#header-wrapper { 
+	.pane-pane-header {
+		max-width:75%;
+		#site-name { 
+			font-size: 1.8em;
+			line-height: 1.2em;
+			margin-top: 9px;
+			strong { font-size:1.725em;}
+		}
+	}
+ .pane-9, .pane-5 { width:25%; }
+}
+
+#main-content { margin:0;}
+
+/* Nav */
+
+//fixed menu
+.locked {
+
+	li.first {
+		a { display:inline-block !important;}
+		top:0px !important;
+	}
+}
+
+/*Home */
+.front {
+	.region-three-33-first,
+	.region-three-33-second,
+	.region-three-33-third {
+		.limit {
+			height:80px;
+			max-height:80px;
+		}
+	}
+}
+ 
+.node-type-page {
+	.sidebar-first #main-content { border-left:1px solid #ccc;}
+}
+/*sldieshow height */
+
+#messages-help-wrapper {
+	height:380px;
+}
+
+/* Services */
+.view-services {
+	.attachment {
+		
+		ul { list-style-type: none; text-align:center;}
+		li { background-repeat: no-repeat; display:inline-block; width:29%; margin:1%;}
+		a {  padding:.34em;line-height:30px; display:inline-block;}
+	}
+}
+
+/* Case Studies */
+
+.view-case-studies {
+	.views-row {
+		width:25%;		
+		img {
+			opacity:0.7;
+			background-color:#fff;
+			-webkit-transition: all 400ms ease-in-out;
+			-moz-transition: all 400ms ease-in-out;
+			-o-transition: all 400ms ease-in-out;
+			transition: all 400ms ease-in-out;
+		}		
+		img:hover { opacity:1.0; box-shadow: 3px 3px 10px 3px #666;}
+	}
+	.views-row-first {
+		width:50%;
+	}
+}
+/* Contact Us Page */
+
+#contact {
+	.region-two-33-66-colwrap {
+	}
+	.region-two-33-66-widthwrap {
+		max-width:1140px;
+		margin:auto;
+	}
+	.region-two-33-66-bottom .region-inner {
+		max-width:1140px;
+		margin:auto;
+		.form-item { width:48%; margin-right:2%; /*float:left; clear:both;*/}
+		/*.webform-component-textarea { float:right;}*/
+	}
+	.region-two-33-66-second {
+    width: 66.6667%;
+	}
+	.region-two-33-66-first {
+		width: 33.3333%;
+	}
+
+}
+
+/* Careers */
+
+.page-jobs {
+	#careers {
+		.region-two-50-top .region-inner {
+			max-width:1140px;
+			margin:auto;
+		}
+		.region-two-50-colwrap {
+			max-width:1140px;
+			margin:auto;
+			.region-two-50-first, .region-two-50-second {
+				width:50%;
+			}
+		}
+		.region-two-50-bottom {
+			background: url("images/bedge_grunge.jpg") repeat fixed 0 0 transparent;
+			.region-inner {
+				max-width:1140px;
+				margin:auto;
+			}
+		}
+	}
+}
+
+/* Footer */
+
+footer {
+	#mini-panel-footer {
+		.region + .region .region-inner, 
+			.region-four-third .region-inner { 
+				border-left: 3px dotted #ccc; 
+				padding-left:3em;
+			}
+		.region-four-first {
+			width:65%;
+		}
+		.region-four-second {
+			width:35%;
+		}
+	}
+	
+}
+ 

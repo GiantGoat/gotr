@@ -1,0 +1,186 @@
+/**
+ *   Important Information about this CSS File
+ *
+ * - Do not delete or rename this file, if you do not use it leave it blank (delete
+ *   everything) and the file will be skipped when you enable Production Mode in
+ *   the Global theme settings.
+ *
+ * - There is an scss (SASS) version of this file in the /sass/ directory in your
+ *   sub-theme, if you set Compass to watch it or the directory this file will be
+ *   overwritten!
+ *
+ * - Read the _README file in this directory, it contains useful help and other information.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/data\/disk\/o4875398837\/static\/launchpad_1_golden\/sites\/giantgoat\.com\/themes\/at_gotr\/sass\/responsive\.desktop\.scss}line{font-family:\0000318}}
+h1.pagetitle {
+  max-width: 1140px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+/* Header */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/data\/disk\/o4875398837\/static\/launchpad_1_golden\/sites\/giantgoat\.com\/themes\/at_gotr\/sass\/responsive\.desktop\.scss}line{font-family:\0000322}}
+#header-wrapper .pane-pane-header {
+  max-width: 75%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/data\/disk\/o4875398837\/static\/launchpad_1_golden\/sites\/giantgoat\.com\/themes\/at_gotr\/sass\/responsive\.desktop\.scss}line{font-family:\0000324}}
+#header-wrapper .pane-pane-header #site-name {
+  font-size: 1.8em;
+  line-height: 1.2em;
+  margin-top: 9px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/data\/disk\/o4875398837\/static\/launchpad_1_golden\/sites\/giantgoat\.com\/themes\/at_gotr\/sass\/responsive\.desktop\.scss}line{font-family:\0000328}}
+#header-wrapper .pane-pane-header #site-name strong {
+  font-size: 1.725em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/data\/disk\/o4875398837\/static\/launchpad_1_golden\/sites\/giantgoat\.com\/themes\/at_gotr\/sass\/responsive\.desktop\.scss}line{font-family:\0000331}}
+#header-wrapper .pane-9, #header-wrapper .pane-5 {
+  width: 25%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/data\/disk\/o4875398837\/static\/launchpad_1_golden\/sites\/giantgoat\.com\/themes\/at_gotr\/sass\/responsive\.desktop\.scss}line{font-family:\0000334}}
+#main-content {
+  margin: 0;
+}
+
+/* Nav */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/data\/disk\/o4875398837\/static\/launchpad_1_golden\/sites\/giantgoat\.com\/themes\/at_gotr\/sass\/responsive\.desktop\.scss}line{font-family:\0000341}}
+.locked li.first {
+  top: 0px !important;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/data\/disk\/o4875398837\/static\/launchpad_1_golden\/sites\/giantgoat\.com\/themes\/at_gotr\/sass\/responsive\.desktop\.scss}line{font-family:\0000342}}
+.locked li.first a {
+  display: inline-block !important;
+}
+
+/*Home */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/data\/disk\/o4875398837\/static\/launchpad_1_golden\/sites\/giantgoat\.com\/themes\/at_gotr\/sass\/responsive\.desktop\.scss}line{font-family:\0000352}}
+.front .region-three-33-first .limit,
+.front .region-three-33-second .limit,
+.front .region-three-33-third .limit {
+  height: 80px;
+  max-height: 80px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/data\/disk\/o4875398837\/static\/launchpad_1_golden\/sites\/giantgoat\.com\/themes\/at_gotr\/sass\/responsive\.desktop\.scss}line{font-family:\0000360}}
+.node-type-page .sidebar-first #main-content {
+  border-left: 1px solid #ccc;
+}
+
+/*sldieshow height */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/data\/disk\/o4875398837\/static\/launchpad_1_golden\/sites\/giantgoat\.com\/themes\/at_gotr\/sass\/responsive\.desktop\.scss}line{font-family:\0000364}}
+#messages-help-wrapper {
+  height: 380px;
+}
+
+/* Services */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/data\/disk\/o4875398837\/static\/launchpad_1_golden\/sites\/giantgoat\.com\/themes\/at_gotr\/sass\/responsive\.desktop\.scss}line{font-family:\0000372}}
+.view-services .attachment ul {
+  list-style-type: none;
+  text-align: center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/data\/disk\/o4875398837\/static\/launchpad_1_golden\/sites\/giantgoat\.com\/themes\/at_gotr\/sass\/responsive\.desktop\.scss}line{font-family:\0000373}}
+.view-services .attachment li {
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 29%;
+  margin: 1%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/data\/disk\/o4875398837\/static\/launchpad_1_golden\/sites\/giantgoat\.com\/themes\/at_gotr\/sass\/responsive\.desktop\.scss}line{font-family:\0000374}}
+.view-services .attachment a {
+  padding: .34em;
+  line-height: 30px;
+  display: inline-block;
+}
+
+/* Case Studies */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/data\/disk\/o4875398837\/static\/launchpad_1_golden\/sites\/giantgoat\.com\/themes\/at_gotr\/sass\/responsive\.desktop\.scss}line{font-family:\0000381}}
+.view-case-studies .views-row {
+  width: 25%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/data\/disk\/o4875398837\/static\/launchpad_1_golden\/sites\/giantgoat\.com\/themes\/at_gotr\/sass\/responsive\.desktop\.scss}line{font-family:\0000383}}
+.view-case-studies .views-row img {
+  opacity: 0.7;
+  background-color: #fff;
+  -webkit-transition: all 400ms ease-in-out;
+  -moz-transition: all 400ms ease-in-out;
+  -o-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/data\/disk\/o4875398837\/static\/launchpad_1_golden\/sites\/giantgoat\.com\/themes\/at_gotr\/sass\/responsive\.desktop\.scss}line{font-family:\0000391}}
+.view-case-studies .views-row img:hover {
+  opacity: 1.0;
+  box-shadow: 3px 3px 10px 3px #666;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/data\/disk\/o4875398837\/static\/launchpad_1_golden\/sites\/giantgoat\.com\/themes\/at_gotr\/sass\/responsive\.desktop\.scss}line{font-family:\0000393}}
+.view-case-studies .views-row-first {
+  width: 50%;
+}
+
+/* Contact Us Page */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/data\/disk\/o4875398837\/static\/launchpad_1_golden\/sites\/giantgoat\.com\/themes\/at_gotr\/sass\/responsive\.desktop\.scss}line{font-family:\00003102}}
+#contact .region-two-33-66-widthwrap {
+  max-width: 1140px;
+  margin: auto;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/data\/disk\/o4875398837\/static\/launchpad_1_golden\/sites\/giantgoat\.com\/themes\/at_gotr\/sass\/responsive\.desktop\.scss}line{font-family:\00003106}}
+#contact .region-two-33-66-bottom .region-inner {
+  max-width: 1140px;
+  margin: auto;
+  /*.webform-component-textarea { float:right;}*/
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/data\/disk\/o4875398837\/static\/launchpad_1_golden\/sites\/giantgoat\.com\/themes\/at_gotr\/sass\/responsive\.desktop\.scss}line{font-family:\00003109}}
+#contact .region-two-33-66-bottom .region-inner .form-item {
+  width: 48%;
+  margin-right: 2%;
+  /*float:left; clear:both;*/
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/data\/disk\/o4875398837\/static\/launchpad_1_golden\/sites\/giantgoat\.com\/themes\/at_gotr\/sass\/responsive\.desktop\.scss}line{font-family:\00003112}}
+#contact .region-two-33-66-second {
+  width: 66.6667%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/data\/disk\/o4875398837\/static\/launchpad_1_golden\/sites\/giantgoat\.com\/themes\/at_gotr\/sass\/responsive\.desktop\.scss}line{font-family:\00003115}}
+#contact .region-two-33-66-first {
+  width: 33.3333%;
+}
+
+/* Careers */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/data\/disk\/o4875398837\/static\/launchpad_1_golden\/sites\/giantgoat\.com\/themes\/at_gotr\/sass\/responsive\.desktop\.scss}line{font-family:\00003125}}
+.page-jobs #careers .region-two-50-top .region-inner {
+  max-width: 1140px;
+  margin: auto;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/data\/disk\/o4875398837\/static\/launchpad_1_golden\/sites\/giantgoat\.com\/themes\/at_gotr\/sass\/responsive\.desktop\.scss}line{font-family:\00003129}}
+.page-jobs #careers .region-two-50-colwrap {
+  max-width: 1140px;
+  margin: auto;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/data\/disk\/o4875398837\/static\/launchpad_1_golden\/sites\/giantgoat\.com\/themes\/at_gotr\/sass\/responsive\.desktop\.scss}line{font-family:\00003132}}
+.page-jobs #careers .region-two-50-colwrap .region-two-50-first, .page-jobs #careers .region-two-50-colwrap .region-two-50-second {
+  width: 50%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/data\/disk\/o4875398837\/static\/launchpad_1_golden\/sites\/giantgoat\.com\/themes\/at_gotr\/sass\/responsive\.desktop\.scss}line{font-family:\00003136}}
+.page-jobs #careers .region-two-50-bottom {
+  background: url("images/bedge_grunge.jpg") repeat fixed 0 0 transparent;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/data\/disk\/o4875398837\/static\/launchpad_1_golden\/sites\/giantgoat\.com\/themes\/at_gotr\/sass\/responsive\.desktop\.scss}line{font-family:\00003138}}
+.page-jobs #careers .region-two-50-bottom .region-inner {
+  max-width: 1140px;
+  margin: auto;
+}
+
+/* Footer */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/data\/disk\/o4875398837\/static\/launchpad_1_golden\/sites\/giantgoat\.com\/themes\/at_gotr\/sass\/responsive\.desktop\.scss}line{font-family:\00003150}}
+footer #mini-panel-footer .region + .region .region-inner,
+footer #mini-panel-footer .region-four-third .region-inner {
+  border-left: 3px dotted #ccc;
+  padding-left: 3em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/data\/disk\/o4875398837\/static\/launchpad_1_golden\/sites\/giantgoat\.com\/themes\/at_gotr\/sass\/responsive\.desktop\.scss}line{font-family:\00003155}}
+footer #mini-panel-footer .region-four-first {
+  width: 65%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/data\/disk\/o4875398837\/static\/launchpad_1_golden\/sites\/giantgoat\.com\/themes\/at_gotr\/sass\/responsive\.desktop\.scss}line{font-family:\00003158}}
+footer #mini-panel-footer .region-four-second {
+  width: 35%;
+}

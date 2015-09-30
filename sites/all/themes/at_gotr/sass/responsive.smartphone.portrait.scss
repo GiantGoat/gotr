@@ -1,0 +1,92 @@
+
+@import "base.scss";
+
+/**
+ *   Important Information about this CSS File
+ *
+ * - Do not delete or rename this file, if you do not use it leave it blank (delete
+ *   everything) and the file will be skipped when you enable Production Mode in
+ *   the Global theme settings.
+ *
+ * - There is an scss (SASS) version of this file in the /sass/ directory in your
+ *   sub-theme, if you set Compass to watch it or the directory this file will be
+ *   overwritten!
+ *
+ * - Read the _README file in this directory, it contains useful help and other information.
+ */
+
+html {
+  font-size: 112.5%; /* Increase the default font size on small devices */
+  //color:orange;
+}
+
+.pane-pane-header { }
+.pane-menu-menu-leader-menu {
+	position:absolute;
+	right:0;
+}
+
+#name-and-slogan { 	
+	//max-width:70%;
+	font-size:0.5em;
+	
+}
+
+#nav-wrapper {
+	.primary-menu-wrapper .primary-menu {
+		text-align:center;
+		float:none;
+
+		li { 
+			float:none;
+			background:none;
+			//display:inline;		
+		}
+	}
+}
+
+//fixed menu
+.locked {
+	#menu-bar { max-width:1140px; background:url("../logo.png") no-repeat left center; background-size:contain;}
+	li.first {
+		a { display:none !important;}
+		top:0px !important;
+	}
+}
+
+ /* Case Studies */
+.view-case-studies {
+	.views-row {
+		width:100%;
+		font-size:0.8em;
+	}
+	.views-row-first {
+		//width:100%;
+	}
+}
+
+/* Client grid */
+.pane-client-grid-panel-pane-1 {
+	.views-quicksand {
+		//float:none;
+		width:50%;
+	}
+}
+
+#mini-panel-footer {
+	.region-inner { margin-left:2em;}
+}
+
+
+ /* Services */
+.page-services .view-content.serviceLocked { //menu
+	left:0;
+	top: 5em;
+}
+.view-services {
+	.attachment {
+		ul { text-align:left; margin:0;}
+		li { display:block; margin-bottom:.3em;}
+		a { font-size:.8em; padding:1%; margin-left: 4.5em; height: 1em; padding: .6em; width:64%;}
+	}
+}
