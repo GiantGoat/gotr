@@ -1,0 +1,8 @@
+name = GG Map
+description = "Adds a map of GG"
+core = 7.x
+dependencies[] = ctools
+files[] = ggmap.module
+version = "7.x-1.0"
+core = "7.x"
+project = "ggmap"
