@@ -11,11 +11,10 @@ dependencies:
   pre:
 
   # Wraith set up
-  # - sudo apt-get build-essential chrpath libssl-dev libxft-dev imagemagick libfreetype6 libfreetype6-dev libfontconfig1 libfontconfig1-dev
+  - sudo apt-get install imagemagick
   - npm install -g phantomjs
-
-  # - sudo apt-get install imagemagick phantomjs
-  # - gem install wraith
+  - sudo apt-get install
+  - gem install wraith
 
 #    - cp cnf/circle.conf /etc/apache2/sites-available/default
 #    - sudo sed -e "s?%HOME%?$(pwd)?g" --in-place /etc/apache2/sites-available/default
@@ -24,7 +23,8 @@ dependencies:
 #     - sudo a2enmod rewrite
 #     - sudo service apache2 restart
 #     - cp cnf/settings.php www/sites/default
-#   override:
+  override:
+      - ""
 #     - composer install --prefer-dist
 #   post:
 #     - sudo chown -R $(whoami):www-data www
@@ -33,6 +33,7 @@ dependencies:
 test:
    override:
      - phantomjs --version
+     - wraith help
       #  - wraith capture config/configs.yaml
         #  - bin/behat -f pretty
 #          - cd www && ../bin/drush fl | grep -qi 'overridden' && (echo 'Feature override test: fail' && exit 0) || (echo 'Feature override: pass' && exit 1)
