@@ -36,6 +36,7 @@ test:
 
   override:
     - bin/behat
+    - wraith capture
     # - bin/push-to-pantheon
     # - bin/behat --config=behat-pantheon.yml
 
