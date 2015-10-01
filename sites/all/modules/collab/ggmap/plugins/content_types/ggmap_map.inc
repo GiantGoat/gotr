@@ -27,4 +27,3 @@ $plugin = array(
 // This is NEEDED to be able to use substitution strings in your pane.
   'all contexts' => TRUE,
 );
-
