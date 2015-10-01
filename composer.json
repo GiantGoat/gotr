@@ -77,6 +77,7 @@
         "derhasi/composer-preserve-paths": "0.1.*",
         "cweagans/composer-patches": "~1.0",
         "drupal/composer_vendor": "7.1.*",
+        "drush/drush": "8.*",
 
         "pantheon-systems/drops-7": "7.*",
 
