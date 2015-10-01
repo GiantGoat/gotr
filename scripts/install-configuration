@@ -1,1 +1,6 @@
+#!/bin/bash
+
+# Compile Sass.
+
 cd sites/all/themes/at_gotr && compass clean && compass compile --environment=production --no-debug-info
+# @todo, commit these resulting changes to be pushed to Pantheon.
