@@ -17,6 +17,9 @@ dependencies:
     - composer global require drupal/coder:8.2.0-beta1
     - ln -s ~/.composer/vendor/drupal/coder/coder_sniffer/Drupal ~/.composer/vendor/squizlabs/php_codesniffer/CodeSniffer/Standards/
 
+    # Sass set up
+    - gem install compass
+
   override:
     - composer install --prefer-dist --no-interaction
 
