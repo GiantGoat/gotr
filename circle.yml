@@ -22,6 +22,7 @@ dependencies:
 
 test:
   pre:
+    - phpcs --report=full --standard=Drupal drupal/sites/all/modules/collab
     - bin/disable-php-email
     - bin/install-drupal
     - bin/start-webserver:
@@ -29,7 +30,6 @@ test:
     - bin/wait-for-webserver
 
   override:
-    - phpcs --report=full --standard=Drupal sites/all/modules/collab
     - bin/behat
     # - bin/push-to-pantheon
     # - bin/behat --config=behat-pantheon.yml
