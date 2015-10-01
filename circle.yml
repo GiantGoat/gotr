@@ -30,7 +30,6 @@ dependencies:
 #     - sudo chown -R $(whoami):www-data www
 #     - build/install.sh
 
-#   test:
-#      override:
-#          - bin/behat -f pretty
-#          - cd www && ../bin/drush fl | grep -qi 'overridden' && (echo 'Feature override test: fail' && exit 0) || (echo 'Feature override: pass' && exit 1)
+   test:
+      override:
+          - phpcs --report=full --standard=Drupal sites/all/modules/collab
