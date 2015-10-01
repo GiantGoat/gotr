@@ -1,0 +1,1 @@
+cd sites/all/themes/at_gotr && compass clean && compass compile --environment=production --no-debug-info
