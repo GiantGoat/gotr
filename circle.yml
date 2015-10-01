@@ -17,19 +17,6 @@ dependencies:
   - composer global require drupal/coder:8.2.0-beta1
   - ln -s ~/.composer/vendor/drupal/coder/coder_sniffer/Drupal ~/.composer/vendor/squizlabs/php_codesniffer/CodeSniffer/Standards/
 
-#    - cp cnf/circle.conf /etc/apache2/sites-available/default
-#    - sudo sed -e "s?%HOME%?$(pwd)?g" --in-place /etc/apache2/sites-available/default
-#     - sudo sed -e "s?%PROJECT_DIR%?www?g" --in-place /etc/apache2/sites-available/default
-#     - sudo sed -e "s?%SERVER%?SERVER?g" --in-place /etc/apache2/sites-available/default
-#     - sudo a2enmod rewrite
-#     - sudo service apache2 restart
-#     - cp cnf/settings.php www/sites/default
-#   override:
-#     - composer install --prefer-dist
-#   post:
-#     - sudo chown -R $(whoami):www-data www
-#     - build/install.sh
-
-   test:
-      override:
-          - phpcs --report=full --standard=Drupal sites/all/modules/collab
+test:
+  override:
+  - phpcs --report=full --standard=Drupal sites/all/modules/collab
