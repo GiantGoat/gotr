@@ -1,0 +1,164 @@
+{
+    "name": "GiantGoat/gotr",
+    "description": "Main repository for giantgoat.com",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "http://packagist.drupal-composer.org/"
+        },
+
+        {
+            "type": "package",
+            "package": {
+                "name": "pantheon-systems/drops-7",
+                "type": "drupal-core",
+                "version": "7.37",
+                "source": {
+                    "url": "https://github.com/pantheon-systems/drops-7.git",
+                    "type": "git",
+                    "reference": "master"
+                },
+                "replace": {
+                    "drupal/drupal": "self.version",
+                    "drupal/aggregator": "self.version",
+                    "drupal/block": "self.version",
+                    "drupal/blog": "self.version",
+                    "drupal/book": "self.version",
+                    "drupal/color": "self.version",
+                    "drupal/comment": "self.version",
+                    "drupal/contact": "self.version",
+                    "drupal/translation": "self.version",
+                    "drupal/contextual": "self.version",
+                    "drupal/dashboard": "self.version",
+                    "drupal/dblog": "self.version",
+                    "drupal/field": "self.version",
+                    "drupal/field_sql_storage": "self.version",
+                    "drupal/field_ui": "self.version",
+                    "drupal/file": "self.version",
+                    "drupal/filter": "self.version",
+                    "drupal/forum": "self.version",
+                    "drupal/help": "self.version",
+                    "drupal/image": "self.version",
+                    "drupal/list": "self.version",
+                    "drupal/locale": "self.version",
+                    "drupal/menu": "self.version",
+                    "drupal/node": "self.version",
+                    "drupal/number": "self.version",
+                    "drupal/openid": "self.version",
+                    "drupal/options": "self.version",
+                    "drupal/overlay": "self.version",
+                    "drupal/path": "self.version",
+                    "drupal/php": "self.version",
+                    "drupal/poll": "self.version",
+                    "drupal/rdf": "self.version",
+                    "drupal/search": "self.version",
+                    "drupal/shortcut": "self.version",
+                    "drupal/statistics": "self.version",
+                    "drupal/syslog": "self.version",
+                    "drupal/system": "self.version",
+                    "drupal/taxonomy": "self.version",
+                    "drupal/simpletest": "self.version",
+                    "drupal/text": "self.version",
+                    "drupal/toolbar": "self.version",
+                    "drupal/tracker": "self.version",
+                    "drupal/trigger": "self.version",
+                    "drupal/update": "self.version",
+                    "drupal/user": "self.version",
+                    "drupal/bartik": "self.version",
+                    "drupal/garland": "self.version",
+                    "drupal/seven": "self.version",
+                    "drupal/stark": "self.version"
+                }
+            }
+        }
+    ],
+    "require": {
+        "davidbarratt/custom-installer": "dev-master",
+        "derhasi/composer-preserve-paths": "0.1.*",
+        "cweagans/composer-patches": "~1.0",
+        "drupal/composer_vendor": "7.1.*",
+
+        "pantheon-systems/drops-7": "7.*",
+
+        "drupal/composer_vendor": "7.1.*",
+        "drupal/views_bulk_operations": "7.3.*",
+        "drupal/admin_menu": "7.3.*",
+        "drupal/admin_views": "7.1.*",
+        "drupal/better_exposed_filters": "7.3.*",
+        "drupal/botcha": "7.3.*",
+        "drupal/browscap": "7.2.*",
+        "drupal/browscap_ctools": "7.1.*",
+        "drupal/ctools": "7.1.*",
+        "drupal/fontyourface": "7.2.*",
+        "drupal/entity": "7.1.*",
+        "drupal/fasttoggle": "7.1.*",
+        "drupal/features": "7.2.*",
+        "drupal/fences": "7.1.*",
+        "drupal/field_collection": "7.1.*",
+        "drupal/field_collection_views": "7.1.*",
+        "drupal/flexslider": "7.2.*",
+        "drupal/geofield": "7.2.*",
+        "drupal/geophp": "7.1.*",
+        "drupal/ggmap": "7.1.*",
+        "drupal/google_analytics": "7.2.*",
+        "drupal/leaflet": "7.1.*",
+        "drupal/leaflet_mapbox": "7.1.*",
+        "drupal/leaflet_widget": "7.2.*",
+        "drupal/libraries": "7.2.*",
+        "drupal/link": "7.1.*",
+        "drupal/markdown": "7.1.*",
+        "drupal/module_filter": "7.2.*",
+        "drupal/moopapi": "7.1.*",
+        "drupal/references": "7.2.*",
+        "drupal/panels": "7.3.*",
+        "drupal/panels_everywhere": "7.1.*",
+        "drupal/pathauto": "7.1.*",
+        "drupal/redirect": "7.1.*",
+        "drupal/robotstxt": "7.1.*",
+        "drupal/strongarm": "7.2.*",
+        "drupal/token": "7.1.*",
+        "drupal/typogrify": "7.1.*",
+        "drupal/views": "7.3.*",
+        "drupal/views_mosaic": "7.1.*",
+        "drupal/views_quicksand": "7.1.*",
+        "drupal/webform": "7.4.*",
+        "drupal/xmlsitemap": "7.2.*",
+        "drupal/adaptivetheme": "7.3.*",
+        "drupal/at_panels_everywhere": "7.3.*"
+    },
+    "require-dev": {
+        "pantheon-systems/circle-scripts": "*"
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "./bin/init-new-project"
+        ]
+    },
+    "config": {
+        "bin-dir": "bin/",
+        "vendor-dir": "drupal/sites/all/vendor"
+    },
+    "extra": {
+        "custom-installer": {
+            "drupal-module": "drupal/sites/all/modules/contrib/{$name}/",
+            "drupal-theme": "drupal/sites/all/themes/contrib/{$name}/",
+            "drupal-library": "drupal/sites/all/libraries/{$name}/",
+            "drupal-drush": "drupal/sites/all/drush/{$name}/",
+            "drupal-profile": "drupal/profiles/{$name}/",
+            "drupal-core": "drupal/"
+        },
+        "preserve-paths": [
+            "drupal/sites/all/modules/contrib",
+            "drupal/sites/all/modules/collab",
+            "drupal/sites/all/themes/contrib",
+            "drupal/sites/all/themes/at_gotr",
+            "drupal/sites/all/libraries",
+            "drupal/sites/all/drush",
+            "drupal/sites/all/vendor",
+            "drupal/sites/default/settings.php",
+            "drupal/sites/default/files"
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
