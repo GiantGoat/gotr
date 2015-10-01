@@ -122,6 +122,7 @@
         "drupal/views_quicksand": "7.1.*",
         "drupal/webform": "7.4.*",
         "drupal/xmlsitemap": "7.2.*",
+
         "drupal/at_panels_everywhere": "7.3.*",
 
         "drupal/adaptivetheme": "7.3.*",
