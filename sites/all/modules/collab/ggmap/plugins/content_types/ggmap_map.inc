@@ -1,7 +1,7 @@
 <?php
 /**
 * @file
-* Defines a leaflet map views style
+* Defines a leaflet map views style.
 */
 
 $plugin = array(
@@ -17,7 +17,7 @@ $plugin = array(
   'edit form' => 'ggmap_pane_settings_form', 
 // A function that will return the renderable content.
   'render callback' => 'ggmap_pane_render', 
-// A function that will return the information displayed on the admin screen (optional).
+// Return the information displayed on the admin screen (optional).
   'admin info' => 'ggmap_admin_info', 
 // Array of defaults for the settings form.
   'defaults' => array( 
