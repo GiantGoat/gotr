@@ -10,13 +10,29 @@ machine:
 dependencies:
   pre:
 
-  # Codesniffer.
-  - composer global require squizlabs/php_codesniffer:2.0.*@dev
+    # Codesniffer.
+    - composer global require squizlabs/php_codesniffer:2.0.*@dev
 
-  # Coder.
-  - composer global require drupal/coder:8.2.0-beta1
-  - ln -s ~/.composer/vendor/drupal/coder/coder_sniffer/Drupal ~/.composer/vendor/squizlabs/php_codesniffer/CodeSniffer/Standards/
+    # Coder.
+    - composer global require drupal/coder:8.2.0-beta1
+    - ln -s ~/.composer/vendor/drupal/coder/coder_sniffer/Drupal ~/.composer/vendor/squizlabs/php_codesniffer/CodeSniffer/Standards/
+
+  override:
+    - composer install --prefer-dist --no-interaction
 
 test:
+  pre:
+    - phpcs --report=full --standard=Drupal drupal/sites/all/modules/collab
+    - bin/disable-php-email
+    - bin/install-drupal
+    - bin/start-webserver:
+        background: true
+    - bin/wait-for-webserver
+
   override:
-  - phpcs --report=full --standard=Drupal sites/all/modules/collab
+    - bin/behat
+    # - bin/push-to-pantheon
+    # - bin/behat --config=behat-pantheon.yml
+
+  post:
+    - bin/stop-webserver
