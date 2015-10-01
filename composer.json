@@ -99,7 +99,6 @@
         "drupal/flexslider": "7.2.*",
         "drupal/geofield": "7.2.*",
         "drupal/geophp": "7.1.*",
-        "drupal/ggmap": "7.1.*",
         "drupal/google_analytics": "7.2.*",
         "drupal/leaflet": "7.1.*",
         "drupal/leaflet_mapbox": "7.1.*",
