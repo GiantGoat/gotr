@@ -36,9 +36,13 @@ test:
 
   override:
     - bin/behat
-    - wraith capture
+    - wraith capture configs/config.yaml
     # - bin/push-to-pantheon
     # - bin/behat --config=behat-pantheon.yml
 
   post:
     - bin/stop-webserver
+
+general:
+  artifacts:
+    - "shots"
