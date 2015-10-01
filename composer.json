@@ -11,7 +11,7 @@
             "type": "package",
             "package": {
                 "name": "pantheon-systems/drops-7",
-                "type": "drupal-core",
+                "type": "drupal-custom",
                 "version": "7.37",
                 "source": {
                     "url": "https://github.com/pantheon-systems/drops-7.git",
@@ -122,16 +122,16 @@
         "drupal/views_quicksand": "7.1.*",
         "drupal/webform": "7.4.*",
         "drupal/xmlsitemap": "7.2.*",
+
+        "drupal/at_panels_everywhere": "7.3.*",
+
         "drupal/adaptivetheme": "7.3.*",
-        "drupal/at_panels_everywhere": "7.3.*"
+
+        "drupal/sar": "*",
+        "pantheon-systems/behat-drush-endpoint": "*"
     },
     "require-dev": {
         "pantheon-systems/circle-scripts": "*"
-    },
-    "scripts": {
-        "post-create-project-cmd": [
-            "./bin/init-new-project"
-        ]
     },
     "config": {
         "bin-dir": "bin/",
@@ -144,7 +144,7 @@
             "drupal-library": "drupal/sites/all/libraries/{$name}/",
             "drupal-drush": "drupal/sites/all/drush/{$name}/",
             "drupal-profile": "drupal/profiles/{$name}/",
-            "drupal-core": "drupal/"
+            "drupal-custom": "drupal/"
         },
         "preserve-paths": [
             "drupal/sites/all/modules/contrib",
@@ -154,7 +154,9 @@
             "drupal/sites/all/libraries",
             "drupal/sites/all/drush",
             "drupal/sites/all/vendor",
+            "drupal/sites/behat",
             "drupal/sites/default/settings.php",
+            "drupal/sites/sites.php",
             "drupal/sites/default/files"
         ]
     },

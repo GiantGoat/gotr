@@ -1,3 +1,9 @@
+# Spurrious directories created by Composer
+modules
+themes
+
+# Places we ignore
+drush
 travis-ci-key
 travis/travis-ci-key
 bin
@@ -32,7 +38,13 @@ drupal/sites/all/modules/README.txt
 drupal/sites/all/modules/contrib/
 drupal/sites/all/themes/contrib/
 drupal/sites/all/vendor/
+<<<<<<< HEAD
+drupal/sites/behat
 drupal/sites/default/default.settings.php
+drupal/sites/sites.php
+=======
+drupal/sites/default/default.settings.php
+>>>>>>> 9efc953a9a689898e5efe1e96cfe9e0161cc7094
 drupal/sites/example.sites.php
 drupal/sites/sites/
 drupal/themes/
