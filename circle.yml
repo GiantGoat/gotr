@@ -30,9 +30,9 @@ dependencies:
 #     - sudo chown -R $(whoami):www-data www
 #     - build/install.sh
 
-  test:
-     override:
-       - phantomjs --version
+test:
+   override:
+     - phantomjs --version
       #  - wraith capture config/configs.yaml
         #  - bin/behat -f pretty
 #          - cd www && ../bin/drush fl | grep -qi 'overridden' && (echo 'Feature override test: fail' && exit 0) || (echo 'Feature override: pass' && exit 1)
