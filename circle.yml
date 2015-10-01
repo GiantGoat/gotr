@@ -11,7 +11,7 @@ dependencies:
   pre:
 
   # Wraith set up
-  - sudo apt-get install libfftw3-double3 libmagickcore5 libmagickcore5-extra libmagickwand5 imagemagick
+  - sudo apt-get install libfftw3-double3 libmagickcore5 libmagickwand5 imagemagick
   - npm install -g phantomjs
   - sudo apt-get install
   - gem install wraith
