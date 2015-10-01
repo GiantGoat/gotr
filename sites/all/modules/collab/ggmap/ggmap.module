@@ -2,12 +2,12 @@
 
 /**
  * Generate a simple map to GiantGoat with a location pointer.
- * 
+ *
  * @return string
  *   The rendered map.
  */
 
- 
+
 /**
  * Implements hook_ctools_plugin_directory().
  */
@@ -22,7 +22,7 @@ function ggmap_ctools_plugin_directory($owner, $plugin_type) {
  */
 function ggmap_pane_settings_form($form, &$form_state) {
   $conf = $form_state['conf'];
- 
+
   $form['lat'] = array(
     '#type' => 'textfield',
     '#title' => t('Latitude'),
@@ -30,7 +30,7 @@ function ggmap_pane_settings_form($form, &$form_state) {
     '#default_value' => $conf['lat'],
     '#required' => TRUE,
   );
-  
+
   $form['lng'] = array(
     '#type' => 'textfield',
     '#title' => t('Longitude'),
@@ -38,10 +38,10 @@ function ggmap_pane_settings_form($form, &$form_state) {
     '#default_value' => $conf['lng'],
     '#required' => TRUE,
   );
- 
+
   return $form;
 }
- 
+
 /**
  * Submit function, note anything in the formstate[conf] automatically gets saved
  * Notice, the magic that automatically does that for you.
@@ -63,10 +63,10 @@ function ggmap_pane_render($subtype, $conf, $args, $contexts) {
   dpm($conf);
   dpm($args);
   dpm($contexts);*/
- 
+
 	//$conf['lat'];
 	//$conf['lng'];
-	
+
 	//$map = gg_map_info();
     //$map = leaflet_render_map(ggmap_map_info(), ggmap_map_features($conf), '450px');
   $map_info = leaflet_map_get_info('ggsite-cloudmade-noscroll');
@@ -76,9 +76,9 @@ function ggmap_pane_render($subtype, $conf, $args, $contexts) {
     //$map = leaflet_render_map($map_info, array(), '450px');
   $features = ggmap_map_features($conf);
     $map = leaflet_render_map($map_info, $features, '450px');
- 
+
 	//return $map;
- 
+
 	$block = new stdClass();
 
 	// initial content is blank
@@ -120,6 +120,10 @@ function ggmap_map_features($point){
 }
 
 function ggmap_leaflet_map_info(){
+  // Private value: do not re-use.
+  // TODO: remove from repository.
+  // baae78bc721e48fd87f3b0375b380242/99664/256
+  $map_uuid = variable_get('gg-map-uuid');
   return array(
     'ggsite-cloudmade-noscroll' => array(
       'label' => 'CM-Gotr nowheel',
@@ -142,7 +146,7 @@ function ggmap_leaflet_map_info(){
       ),
       'layers' => array(
         'earth' => array(
-          'urlTemplate' => 'http://{s}.tile.cloudmade.com/baae78bc721e48fd87f3b0375b380242/99664/256/{z}/{x}/{y}.png',
+          'urlTemplate' => 'http://{s}.tile.cloudmade.com/' . $map_uuid . '/{z}/{x}/{y}.png',
           'options' => array(
             'attribution' => '<a href="/colophon">Used under license</a>',
           ),
