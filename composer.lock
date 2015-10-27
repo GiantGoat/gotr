@@ -643,15 +643,15 @@
         },
         {
             "name": "drupal/features",
-            "version": "7.2.6",
+            "version": "7.2.7",
             "source": {
                 "type": "git",
                 "url": "http://git.drupal.org/project/features",
-                "reference": "b9f90ccaaf342ee9b454e0f8ee7b4618181ce7bc"
+                "reference": "a8b9dc5aa67b95fc3e95bb91ed0647baf66c1402"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://ftp.drupal.org/files/projects/features-7.x-2.6.zip",
+                "url": "http://ftp.drupal.org/files/projects/features-7.x-2.7.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -698,15 +698,15 @@
         },
         {
             "name": "drupal/field_collection",
-            "version": "7.1.0-beta8",
+            "version": "7.1.0-beta10",
             "source": {
                 "type": "git",
                 "url": "http://git.drupal.org/project/field_collection",
-                "reference": "bb4c9813cbd277dbf5d4710b7600fed7ba3f1149"
+                "reference": "99ef0fedf784825f368a5de2afb7ea801b64dc04"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://ftp.drupal.org/files/projects/field_collection-7.x-1.0-beta8.zip",
+                "url": "http://ftp.drupal.org/files/projects/field_collection-7.x-1.0-beta10.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -721,7 +721,8 @@
                 }
             },
             "notification-url": "http://packagist.drupal-composer.org/downloads/",
-            "description": "Provides a field collection field, to which any number of fields can be attached."
+            "description": "Provides a field collection field, to which any number of fields can be attached.",
+            "homepage": "https://www.drupal.org/project/field_collection"
         },
         {
             "name": "drupal/field_collection_views",
@@ -927,20 +928,21 @@
         },
         {
             "name": "drupal/leaflet",
-            "version": "7.1.1",
+            "version": "7.1.3",
             "source": {
                 "type": "git",
                 "url": "http://git.drupal.org/project/leaflet",
-                "reference": "5b797af79367d88880d0542a2f5411dff397a8f3"
+                "reference": "69f7f2487a0b520efbdc1a681b3e4827532b11da"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://ftp.drupal.org/files/projects/leaflet-7.x-1.1.zip",
+                "url": "http://ftp.drupal.org/files/projects/leaflet-7.x-1.3.zip",
                 "reference": null,
                 "shasum": null
             },
             "require": {
                 "drupal/drupal": "7.*",
+                "drupal/image": "7.*",
                 "drupal/libraries": "7.*"
             },
             "replace": {
@@ -958,7 +960,8 @@
                 }
             },
             "notification-url": "http://packagist.drupal-composer.org/downloads/",
-            "description": "Integration with the Leaflet map scripting library."
+            "description": "Integration with the Leaflet map scripting library.",
+            "homepage": "https://www.drupal.org/project/leaflet"
         },
         {
             "name": "drupal/leaflet_mapbox",
@@ -1216,15 +1219,15 @@
         },
         {
             "name": "drupal/pathauto",
-            "version": "7.1.2",
+            "version": "7.1.3",
             "source": {
                 "type": "git",
                 "url": "http://git.drupal.org/project/pathauto",
-                "reference": "e95ceafa6b4638084cc37aeaff268f117f84a111"
+                "reference": "88db3ee74ddf62eab54e12347955dd2f6dd66737"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://ftp.drupal.org/files/projects/pathauto-7.x-1.2.zip",
+                "url": "http://ftp.drupal.org/files/projects/pathauto-7.x-1.3.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -1558,15 +1561,15 @@
         },
         {
             "name": "drupal/webform",
-            "version": "7.4.11",
+            "version": "7.4.12",
             "source": {
                 "type": "git",
                 "url": "http://git.drupal.org/project/webform",
-                "reference": "d66a19487980eab319d8de9f957cc7169b82f1c9"
+                "reference": "b52f60c1eed30c358e5ba4818ee4358436a06ed0"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://ftp.drupal.org/files/projects/webform-7.x-4.11.zip",
+                "url": "http://ftp.drupal.org/files/projects/webform-7.x-4.12.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -1629,16 +1632,16 @@
         },
         {
             "name": "drush/drush",
-            "version": "7.0.0",
+            "version": "7.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drush-ops/drush.git",
-                "reference": "02a9841b29daba7b55295903c1c4b0a45c9abdc5"
+                "reference": "7e5e4b15e617ed77804d836a66229a70a67025c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drush-ops/drush/zipball/02a9841b29daba7b55295903c1c4b0a45c9abdc5",
-                "reference": "02a9841b29daba7b55295903c1c4b0a45c9abdc5",
+                "url": "https://api.github.com/repos/drush-ops/drush/zipball/7e5e4b15e617ed77804d836a66229a70a67025c9",
+                "reference": "7e5e4b15e617ed77804d836a66229a70a67025c9",
                 "shasum": ""
             },
             "require": {
@@ -1709,7 +1712,7 @@
             ],
             "description": "Drush is a command line shell and scripting interface for Drupal, a veritable Swiss Army knife designed to make life easier for those of us who spend some of our working hours hacking away at the command prompt.",
             "homepage": "http://www.drush.org",
-            "time": "2015-05-20 14:23:37"
+            "time": "2015-10-23 12:48:00"
         },
         {
             "name": "pantheon-systems/behat-drush-endpoint",
@@ -2493,16 +2496,16 @@
         },
         {
             "name": "drupal/drupal-driver",
-            "version": "v1.1.1",
+            "version": "v1.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jhedstrom/DrupalDriver.git",
-                "reference": "96ebcbbd6d553450c66979fdfd371895d4763231"
+                "reference": "4fce9e274819a5299e501a488a847d50cd22f111"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jhedstrom/DrupalDriver/zipball/96ebcbbd6d553450c66979fdfd371895d4763231",
-                "reference": "96ebcbbd6d553450c66979fdfd371895d4763231",
+                "url": "https://api.github.com/repos/jhedstrom/DrupalDriver/zipball/4fce9e274819a5299e501a488a847d50cd22f111",
+                "reference": "4fce9e274819a5299e501a488a847d50cd22f111",
                 "shasum": ""
             },
             "require": {
@@ -2540,7 +2543,7 @@
                 "test",
                 "web"
             ],
-            "time": "2015-09-02 18:25:27"
+            "time": "2015-10-27 17:03:05"
         },
         {
             "name": "drupal/drupal-extension",
@@ -2709,16 +2712,16 @@
         },
         {
             "name": "guzzlehttp/promises",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/promises.git",
-                "reference": "97fe7210def29451ec74923b27e552238defd75a"
+                "reference": "b1e1c0d55f8083c71eda2c28c12a228d708294ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/97fe7210def29451ec74923b27e552238defd75a",
-                "reference": "97fe7210def29451ec74923b27e552238defd75a",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/b1e1c0d55f8083c71eda2c28c12a228d708294ea",
+                "reference": "b1e1c0d55f8083c71eda2c28c12a228d708294ea",
                 "shasum": ""
             },
             "require": {
@@ -2756,7 +2759,7 @@
             "keywords": [
                 "promise"
             ],
-            "time": "2015-08-15 19:37:21"
+            "time": "2015-10-15 22:28:00"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -2876,16 +2879,16 @@
         },
         {
             "name": "pantheon-systems/ci-scripts",
-            "version": "1.0.20",
+            "version": "1.0.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pantheon-systems/ci-scripts.git",
-                "reference": "18dafad5aa20654f76a6d4f19566035c971522b6"
+                "reference": "4bd96e299b3d53cec2bb0ef49d658e57dcd8de82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pantheon-systems/ci-scripts/zipball/18dafad5aa20654f76a6d4f19566035c971522b6",
-                "reference": "18dafad5aa20654f76a6d4f19566035c971522b6",
+                "url": "https://api.github.com/repos/pantheon-systems/ci-scripts/zipball/4bd96e299b3d53cec2bb0ef49d658e57dcd8de82",
+                "reference": "4bd96e299b3d53cec2bb0ef49d658e57dcd8de82",
                 "shasum": ""
             },
             "require": {
@@ -2910,7 +2913,7 @@
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
             "description": "Scripts helpful for testing a Drupal site on a Continuous-Integration server, or locally.",
-            "time": "2015-10-01 23:57:55"
+            "time": "2015-10-27 17:05:20"
         },
         {
             "name": "pantheon-systems/circle-scripts",
@@ -3048,16 +3051,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "2.2.3",
+            "version": "2.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "ef1ca6835468857944d5c3b48fa503d5554cff2f"
+                "reference": "eabf68b476ac7d0f73793aada060f1c1a9bf8979"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/ef1ca6835468857944d5c3b48fa503d5554cff2f",
-                "reference": "ef1ca6835468857944d5c3b48fa503d5554cff2f",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/eabf68b476ac7d0f73793aada060f1c1a9bf8979",
+                "reference": "eabf68b476ac7d0f73793aada060f1c1a9bf8979",
                 "shasum": ""
             },
             "require": {
@@ -3106,7 +3109,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-09-14 06:51:16"
+            "time": "2015-10-06 15:47:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -3288,16 +3291,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "4.8.10",
+            "version": "4.8.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "463163747474815c5ccd4ae12b5b355ec12158e8"
+                "reference": "625f8c345606ed0f3a141dfb88f4116f0e22978e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/463163747474815c5ccd4ae12b5b355ec12158e8",
-                "reference": "463163747474815c5ccd4ae12b5b355ec12158e8",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/625f8c345606ed0f3a141dfb88f4116f0e22978e",
+                "reference": "625f8c345606ed0f3a141dfb88f4116f0e22978e",
                 "shasum": ""
             },
             "require": {
@@ -3356,20 +3359,20 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-10-01 09:14:30"
+            "time": "2015-10-23 06:48:33"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
-            "version": "2.3.7",
+            "version": "2.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "5e2645ad49d196e020b85598d7c97e482725786a"
+                "reference": "ac8e7a3db35738d56ee9a76e78a4e03d97628983"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/5e2645ad49d196e020b85598d7c97e482725786a",
-                "reference": "5e2645ad49d196e020b85598d7c97e482725786a",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/ac8e7a3db35738d56ee9a76e78a4e03d97628983",
+                "reference": "ac8e7a3db35738d56ee9a76e78a4e03d97628983",
                 "shasum": ""
             },
             "require": {
@@ -3412,7 +3415,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2015-08-19 09:14:08"
+            "time": "2015-10-02 06:51:40"
         },
         {
             "name": "psr/http-message",
@@ -3697,16 +3700,16 @@
         },
         {
             "name": "sebastian/global-state",
-            "version": "1.0.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/global-state.git",
-                "reference": "c7428acdb62ece0a45e6306f1ae85e1c05b09c01"
+                "reference": "bc37d50fea7d017d3d340f230811c9f1d7280af4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/global-state/zipball/c7428acdb62ece0a45e6306f1ae85e1c05b09c01",
-                "reference": "c7428acdb62ece0a45e6306f1ae85e1c05b09c01",
+                "url": "https://api.github.com/repos/sebastianbergmann/global-state/zipball/bc37d50fea7d017d3d340f230811c9f1d7280af4",
+                "reference": "bc37d50fea7d017d3d340f230811c9f1d7280af4",
                 "shasum": ""
             },
             "require": {
@@ -3744,7 +3747,7 @@
             "keywords": [
                 "global state"
             ],
-            "time": "2014-10-06 09:23:50"
+            "time": "2015-10-12 03:26:01"
         },
         {
             "name": "sebastian/recursion-context",
