@@ -1,6 +1,6 @@
 {
-    "name": "GiantGoat/gotr",
-    "description": "Main repository for giantgoat.com",
+    "name": "pantheon-systems/example-drupal7-circle-composer",
+    "description": "Template for creating a project to manage a Drupal site with Composer, and test with Circle CI.  Use `composer create-project` to make your own project, or, if you prefer to clone the git repository, run `composer install` followed by `bin/init-new-project` to replace this file and set up your starting project.",
     "repositories": [
         {
             "type": "composer",
@@ -11,8 +11,8 @@
             "type": "package",
             "package": {
                 "name": "pantheon-systems/drops-7",
-                "type": "drupal-custom",
-                "version": "7.37",
+                "type": "drupal-core",
+                "version": "7.40",
                 "source": {
                     "url": "https://github.com/pantheon-systems/drops-7.git",
                     "type": "git",
@@ -73,14 +73,18 @@
         }
     ],
     "require": {
-        "davidbarratt/custom-installer": "dev-master",
+        "composer/installers": "^1.0.21",
         "derhasi/composer-preserve-paths": "0.1.*",
         "cweagans/composer-patches": "~1.0",
-        "drupal/composer_vendor": "7.1.*",
 
         "pantheon-systems/drops-7": "7.*",
 
         "drupal/composer_vendor": "7.1.*",
+
+        "drupal/admin_menu": "7.3.*",
+        "drupal/devel": "7.1.*",
+        "drupal/responsive_bartik": "7.1.*",
+
         "drupal/views_bulk_operations": "7.3.*",
         "drupal/admin_menu": "7.3.*",
         "drupal/admin_views": "7.1.*",
@@ -133,18 +137,23 @@
     "require-dev": {
         "pantheon-systems/circle-scripts": "*"
     },
+    "scripts": {
+        "post-create-project-cmd": [
+            "./bin/init-new-project"
+        ]
+    },
     "config": {
         "bin-dir": "bin/",
         "vendor-dir": "drupal/sites/all/vendor"
     },
     "extra": {
-        "custom-installer": {
-            "drupal-module": "drupal/sites/all/modules/contrib/{$name}/",
-            "drupal-theme": "drupal/sites/all/themes/contrib/{$name}/",
-            "drupal-library": "drupal/sites/all/libraries/{$name}/",
-            "drupal-drush": "drupal/sites/all/drush/{$name}/",
-            "drupal-profile": "drupal/profiles/{$name}/",
-            "drupal-custom": "drupal/"
+        "installer-paths": {
+            "drupal/sites/all/modules/contrib/{$name}/": ["type:drupal-module"],
+            "drupal/sites/all/themes/contrib/{$name}/": ["type:drupal-theme"],
+            "drupal/sites/all/drush/{$name}/": ["type:drupal-drush"],
+            "drupal/sites/all/libraries/{$name}/": ["type:drupal-library"],
+            "drupal/profiles/{$name}/": ["type:drupal-profile"],
+            "drupal/": ["type:drupal-core"]
         },
         "preserve-paths": [
             "drupal/sites/all/modules/contrib",

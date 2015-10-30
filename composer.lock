@@ -4,22 +4,25 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7fe239bb6d46adbcf19f31f5743a9e14",
-    "content-hash": "bb6a421a90c69c711e5e5c45b8f2338f",
+    "hash": "2230af790179d9f45a2f7004782ef245",
+    "content-hash": "e11a1dd1c79c8ca75cd6a8c26b3d03ca",
     "packages": [
         {
             "name": "composer/installers",
-            "version": "v1.0.21",
+            "version": "v1.0.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "d64e23fce42a4063d63262b19b8e7c0f3b5e4c45"
+                "reference": "bd9b14f094c89c8b5804a4e41edeb7853bb85046"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/d64e23fce42a4063d63262b19b8e7c0f3b5e4c45",
-                "reference": "d64e23fce42a4063d63262b19b8e7c0f3b5e4c45",
+                "url": "https://api.github.com/repos/composer/installers/zipball/bd9b14f094c89c8b5804a4e41edeb7853bb85046",
+                "reference": "bd9b14f094c89c8b5804a4e41edeb7853bb85046",
                 "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "1.0.0"
             },
             "replace": {
                 "roundcube/plugin-installer": "*",
@@ -29,9 +32,9 @@
                 "composer/composer": "1.0.*@dev",
                 "phpunit/phpunit": "4.1.*"
             },
-            "type": "composer-installer",
+            "type": "composer-plugin",
             "extra": {
-                "class": "Composer\\Installers\\Installer",
+                "class": "Composer\\Installers\\Plugin",
                 "branch-alias": {
                     "dev-master": "1.0-dev"
                 }
@@ -100,7 +103,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2015-02-18 17:17:01"
+            "time": "2015-10-29 23:28:48"
         },
         {
             "name": "cweagans/composer-patches",
@@ -181,44 +184,6 @@
             ],
             "description": "A tiny, but robust REPL (Read-Evaluate-Print-Loop) for PHP.",
             "time": "2015-03-01 08:05:19"
-        },
-        {
-            "name": "davidbarratt/custom-installer",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/davidbarratt/custom-installer.git",
-                "reference": "8b0e9eff220c5c6b24019db2153292bc70a53421"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/davidbarratt/custom-installer/zipball/8b0e9eff220c5c6b24019db2153292bc70a53421",
-                "reference": "8b0e9eff220c5c6b24019db2153292bc70a53421",
-                "shasum": ""
-            },
-            "require": {
-                "composer-plugin-api": "1.0.0"
-            },
-            "require-dev": {
-                "composer/composer": "1.0.*@dev",
-                "phpunit/phpunit": "4.1.*"
-            },
-            "type": "composer-plugin",
-            "extra": {
-                "class": "DavidBarratt\\CustomInstaller\\CustomInstallerPlugin"
-            },
-            "autoload": {
-                "psr-4": {
-                    "DavidBarratt\\CustomInstaller\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "description": "Install custom types into custom locations.",
-            "homepage": "https://github.com/davidbarratt/custom-installer",
-            "time": "2014-09-01 16:05:23"
         },
         {
             "name": "derhasi/composer-preserve-paths",
@@ -571,6 +536,39 @@
             "notification-url": "http://packagist.drupal-composer.org/downloads/",
             "description": "A library of helpful tools by Merlin of Chaos.",
             "homepage": "https://www.drupal.org/project/ctools"
+        },
+        {
+            "name": "drupal/devel",
+            "version": "7.1.5",
+            "source": {
+                "type": "git",
+                "url": "http://git.drupal.org/project/devel",
+                "reference": "becb6ca3ced27872b941b30ca308da03a209425a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://ftp.drupal.org/files/projects/devel-7.x-1.5.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/drupal": "7.*"
+            },
+            "replace": {
+                "drupal/devel_generate": "self.version",
+                "drupal/devel_node_access": "self.version"
+            },
+            "suggest": {
+                "drupal/menu": "Required by drupal/devel_node_access"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-7.x-1.x": "7.1.x-dev"
+                }
+            },
+            "notification-url": "http://packagist.drupal-composer.org/downloads/",
+            "description": "Various blocks, pages, and functions for developers."
         },
         {
             "name": "drupal/entity",
@@ -1310,6 +1308,32 @@
             "description": "Defines common base features for the various reference field types."
         },
         {
+            "name": "drupal/responsive_bartik",
+            "version": "7.1.0",
+            "source": {
+                "type": "git",
+                "url": "http://git.drupal.org/project/responsive_bartik",
+                "reference": "58ae0e05a26cb0b984a209c5ed4381f9e6710e46"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://ftp.drupal.org/files/projects/responsive_bartik-7.x-1.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/drupal": "7.*"
+            },
+            "type": "drupal-theme",
+            "extra": {
+                "branch-alias": {
+                    "dev-7.x-1.x": "7.1.x-dev"
+                }
+            },
+            "notification-url": "http://packagist.drupal-composer.org/downloads/",
+            "description": "A flexible, recolorable theme with many regions and a responsive, mobile-first layout."
+        },
+        {
             "name": "drupal/robotstxt",
             "version": "7.1.3",
             "source": {
@@ -1748,7 +1772,7 @@
         },
         {
             "name": "pantheon-systems/drops-7",
-            "version": "7.37",
+            "version": "7.40",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pantheon-systems/drops-7.git",
@@ -1805,7 +1829,7 @@
                 "drupal/update": "self.version",
                 "drupal/user": "self.version"
             },
-            "type": "drupal-custom"
+            "type": "drupal-core"
         },
         {
             "name": "pear/console_table",
@@ -4410,9 +4434,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "davidbarratt/custom-installer": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
