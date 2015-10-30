@@ -132,7 +132,6 @@
         "drupal/adaptivetheme": "7.3.*",
 
         "drupal/sar": "*",
-        "pantheon-systems/behat-drush-endpoint": "*"
     },
     "require-dev": {
         "pantheon-systems/circle-scripts": "*"
