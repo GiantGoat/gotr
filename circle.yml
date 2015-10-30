@@ -20,6 +20,9 @@ dependencies:
   override:
     - composer install --prefer-dist --no-interaction
 
+  cache_directories:
+    - "~/.terminus"
+
 test:
   pre:
     - phpcs --report=full --standard=Drupal drupal/sites/all/modules/collab
