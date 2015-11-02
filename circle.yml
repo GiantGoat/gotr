@@ -33,7 +33,7 @@ test:
     - bin/wait-for-webserver
 
   override:
-    - bin/behat
+    #- bin/behat
     - bin/push-to-pantheon
     - bin/behat --config=behat-pantheon.yml
 
