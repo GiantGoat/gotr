@@ -12,7 +12,7 @@
             "package": {
                 "name": "pantheon-systems/drops-7",
                 "type": "drupal-core",
-                "version": "7.40",
+                "version": "7.41",
                 "source": {
                     "url": "https://github.com/pantheon-systems/drops-7.git",
                     "type": "git",
@@ -130,6 +130,7 @@
         "drupal/at_panels_everywhere": "7.3.*",
 
         "drupal/adaptivetheme": "7.3.1",
+        "drupal/smtp": "7.1.*",
 
         "drupal/sar": "*"
     },

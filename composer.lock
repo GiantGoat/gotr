@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d2311200cb79ab45f755643deaa43e19",
-    "content-hash": "6c670634e5a7ca0f472491722c25d906",
+    "hash": "897b9e290cbd6e207ac9d77178ca4e2f",
+    "content-hash": "3921060ec9fed2731661a29008d3a653",
     "packages": [
         {
             "name": "composer/installers",
@@ -1387,6 +1387,32 @@
             "description": "This drush plugin performs a text search & replace on all content and content revisions in all text fields in a Drupal site."
         },
         {
+            "name": "drupal/smtp",
+            "version": "7.1.2",
+            "source": {
+                "type": "git",
+                "url": "http://git.drupal.org/project/smtp",
+                "reference": "12d1b938f5101ffdf673b1454927af550b0d2c02"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://ftp.drupal.org/files/projects/smtp-7.x-1.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/drupal": "7.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-7.x-1.x": "7.1.x-dev"
+                }
+            },
+            "notification-url": "http://packagist.drupal-composer.org/downloads/",
+            "description": "Allow for site emails to be sent through an SMTP server of your choice."
+        },
+        {
             "name": "drupal/strongarm",
             "version": "7.2.0",
             "source": {
@@ -1740,7 +1766,7 @@
         },
         {
             "name": "pantheon-systems/drops-7",
-            "version": "7.40",
+            "version": "7.41",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pantheon-systems/drops-7.git",
